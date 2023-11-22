@@ -391,7 +391,7 @@ header {
 		line-height: 1.5em;
 		font-size: 1.6rem;
 	}
-	.card-news {
+	.card-news, .card-news2{
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -407,9 +407,13 @@ header {
 		opacity: 1;
 		visibility: visible;
 	}
+	.card-news2{
+		background: $black;
+		color: $white;
+	}
 }
 
-.cards:hover .card-news {
+.cards:hover .card-news, .card-news2 {
 	opacity: 0;
 	visibility: hidden;
 }

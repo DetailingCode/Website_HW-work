@@ -443,7 +443,7 @@ header .fa-chevron-down {
   line-height: 1.5em;
   font-size: 1.6rem;
 }
-.cards .card-news {
+.cards .card-news, .cards .card-news2 {
   position: absolute;
   top: 0;
   right: 0;
@@ -458,8 +458,12 @@ header .fa-chevron-down {
   opacity: 1;
   visibility: visible;
 }
+.cards .card-news2 {
+  background: black;
+  color: #fff;
+}
 
-.cards:hover .card-news {
+.cards:hover .card-news, .card-news2 {
   opacity: 0;
   visibility: hidden;
 }
