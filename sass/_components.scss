@@ -1,0 +1,58 @@
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.btn-info {
+	background-color: $btn-color;
+	text-transform: uppercase;
+	margin: 1em 0 1em 0;
+	width: 60%;
+	height: auto;
+	padding: 1em;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 1.2rem;
+	font-weight: bold;
+	box-shadow: 2px 2px 5px $black;
+
+	&:hover {
+		background-color: $main-color;
+	}
+}
+
+.btn-animation {
+	position: relative;
+	transition: background-color 0.3s;
+	overflow: hidden;
+	z-index: 0;
+
+	&::before {
+		content: "";
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transform: scaleX(0);
+		transform-origin: center;
+		transition: transform 0.5s;
+		z-index: -1;
+	}
+	&:hover::before {
+		transform: scaleX(1);
+		transform-origin: center;
+		
+	}
+}
+
+.section-padding {
+	padding: 6em 2em;
+}
+
+.btn-info {
+	background-color: $btn-bg;
+}

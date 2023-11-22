@@ -1,0 +1,1117 @@
+@import "./colors";
+@import "./reset";
+@import "./animation";
+@import "./components";
+@import "./mixins";
+
+body {
+	position: relative;
+	font-family: "Ubuntu", sans-serif;
+	background-color: $bg-color;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 4rem;
+}
+
+.underline {
+	margin: 0 auto 40px;
+	width: 200px;
+	height: 4px;
+	background-color: $main-color;
+}
+
+.blue-text {
+	color: $main-color;
+}
+
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar-nav .nav-link.active,
+.dropdown-toggle.show {
+	color: $main-color;
+}
+
+// .carousel-inner .carousel-item {
+// 	transition: -webkit-transform 2s 5s ease-in-out;
+// 	transition: transform 2s 5s ease-in-out;
+// 	transition: transform 2s 5s ease-in-out, -webkit-transform 2s 5s ease-in-out;
+// }
+
+nav {
+	text-transform: uppercase;
+	transition: background-color 0.6s;
+	z-index: 1000;
+
+	.dropdown-menu {
+		// display: none;
+		width: 185px;
+		background-color: rgba(0, 0, 0, 0.7);
+		&:hover > li {
+			display: initial;
+		}
+	}
+
+	.dropdown-item {
+		color: $white;
+		text-transform: uppercase;
+		font-size: 1.4rem;
+		text-align: center;
+		line-height: 2.5rem;
+		&:hover {
+			background-color: rgba(255, 111, 0, 0.7);
+			color: $white;
+		}
+	}
+
+	.nav-link {
+		position: relative;
+		font-size: 1.5rem;
+		color: $white;
+		text-decoration: none;
+	}
+
+	.logo-nav {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		width: 110px;
+		height: 55px;
+	}
+
+	.link,
+	.link::after,
+	.link::before {
+		transition: 0.3s;
+	}
+
+	.nav-line::after {
+		content: "";
+		position: absolute;
+		height: 1px;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		background-color: #fff;
+		transition: transform 0.3s;
+		transform: scaleX(0);
+		transform-origin: right;
+	}
+
+	.nav-line:hover::after {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+
+	.nav-link,
+	i {
+		color: $white;
+	}
+
+	.nav-link {
+		margin-top: 5px;
+		position: relative;
+		font-size: 1.5rem;
+		color: $white;
+		text-decoration: none;
+	}
+
+	.nav-link:hover {
+		color: $main-color;
+	}
+
+	.fa-bars {
+		padding: 10px;
+		font-size: 3rem;
+	}
+
+	.navbar-brand {
+		font-weight: bold;
+	}
+
+	.nav-link.active {
+		color: $main-color;
+	}
+}
+
+.link,
+.link::after,
+.link::before {
+	transition: 0.3s;
+}
+
+.one::after {
+	content: "";
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+	transition: transform 0.3s;
+	transform: scaleX(0);
+	transform-origin: right;
+}
+
+.one:hover::after {
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
+// ===================== HEADER ===============
+
+header {
+	color: $white;
+
+	h1 {
+		font-size: 3rem;
+		font-family: "Play", sans-serif;
+		text-transform: uppercase;
+		color: $main-color;
+		font-weight: bold;
+	}
+
+	h2 {
+		color: $dark;
+		font-family: "Play", sans-serif;
+		font-weight: bold;
+		font-size: 2.6rem;
+		text-shadow: 1px 1px 5px white;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	.logo-hw {
+		margin-left: 1em;
+		width: 70%;
+	}
+
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url("../image/Aboutus2_1900.jpg");
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+	}
+
+	.hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -10;
+	}
+
+	.btn-home {
+		margin-top: 2em;
+		margin-left: 1.6em;
+		padding: 1em 1.1em;
+		font-size: 1.2rem;
+		background-color: $main-color;
+		color: $black;
+		font-weight: bold;
+		transition: 0.3s;
+		text-transform: uppercase;
+		text-decoration: none;
+		border: none;
+		border-radius: 10px;
+		box-shadow: 0px 0px 10px 3px $white;
+		cursor: pointer;
+	}
+	.btn-home:hover {
+		scale: 1.05;
+		font-weight: bold;
+	}
+
+	.hero-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		padding: 10px;
+		text-align: center;
+		z-index: 5;
+	}
+
+	.btn-outline-light {
+		text-transform: uppercase;
+	}
+
+	.fa-chevron-down {
+		position: absolute;
+		left: 49%;
+		bottom: 20px;
+		font-size: 20px;
+		color: $white;
+	}
+}
+// PORTFOLIO SECTION
+
+.portfolio {
+	background: rgb(120, 120, 120);
+	background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+
+	h2 {
+		color: $white;
+		font-size: 4rem;
+	}
+
+	.carousel-item {
+		position: relative;
+		height: 600px;
+		h5 {
+			font-size: 2rem;
+		}
+		p {
+			font-size: 1.4rem;
+		}
+	}
+
+	.carousel-caption {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 40px 0;
+		background-color: rgba(0, 0, 0, 0.8);
+		color: $white;
+	}
+
+	.carousel-indicators {
+		padding-bottom: 20px;
+	}
+
+	.slider-image {
+		width: 100%;
+		height: 600px;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+		background-size: cover;
+	}
+}
+
+// FEATURES SECTION
+
+.features {
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+
+	.features-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	.features-card-text {
+		font-size: 15px;
+	}
+
+	.features-hover {
+		transition: all 0.3s;
+	}
+
+	.features-hover:hover {
+		color: $main-color;
+		scale: 1.05;
+		cursor: default;
+	}
+}
+
+.features-hero {
+	position: relative;
+	background-image: url("../image/about-hero-small.jpg");
+	background-position: center;
+	background-size: cover;
+	color: $light-gray;
+	z-index: 0;
+
+	.features-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: -5;
+	}
+
+	.features-hero-item {
+		margin: 10px 0;
+
+		i {
+			font-size: 36px;
+		}
+
+		.features-hero-title {
+			font-size: 24px;
+		}
+	}
+}
+
+// =============== MOTOR CARDS ANIMATED SECTION===================
+
+.cardbox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 8em 5em;
+	margin-top: 10em;
+}
+
+.cards {
+	position: relative;
+	width: 450px;
+	height: 400px;
+	justify-content: flex-start;
+	align-items: left;
+	line-height: normal;
+	border-radius: 10px;
+	// border: 1px solid black;
+	box-shadow: 2px 2px 7px black;
+	// background-color: rgba(255, 69, 0, 0.7);
+	transition: all 0.6s;
+	&:hover {
+		box-shadow: 1px 1px 20px rgba(255, 69, 0, 0.9);
+		// border: none;
+	}
+
+	p {
+		line-height: 1.5em;
+		font-size: 1.6rem;
+	}
+	.card-news {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: $orangered;
+		padding: 10px 10px;
+		border-top-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+		font-size: 1.5rem;
+		font-weight: bold;
+		// text-shadow: 1px 1px 1px $text-shadow-color;
+		font-family: "Play", sans-serif;
+		transition: 1s;
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.cards:hover .card-news {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.cards .motor-card-img {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 340px;
+	transition: 0.5s;
+}
+
+.cards:hover .motor-card-img {
+	left: 83%;
+	height: 430px;
+}
+
+.cards .content {
+	text-align: left;
+	position: relative;
+	width: 60%;
+	left: 20%;
+	color: rgb(0, 0, 0);
+	padding: 20px 20px 20px 40px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s;
+}
+
+.cards:hover .content {
+	left: 0%;
+	opacity: 1;
+	visibility: visible;
+	padding-left: 20px;
+}
+
+.button-motor {
+	position: relative;
+	font-size: 1.4rem;
+	color: rgb(255, 255, 255);
+	top: 15px;
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 10px;
+	background: rgb(0, 0, 0);
+	text-decoration: none;
+	box-shadow: 1px 1px 4px black;
+	transition: all 0.5s;
+	&:hover {
+		background-color: $white;
+		color: rgb(0, 0, 0);
+		// box-shadow: 1px 1px 4px black;
+		// border: 1px solid $black;
+	}
+}
+
+.card-heading {
+	position: relative;
+	color: rgb(0, 0, 0);
+	text-transform: uppercase;
+	font-family: "Kanit", sans-serif;
+	font-size: 3.2rem;
+	font-weight: bold;
+	top: 10px;
+	text-shadow: 1px 1px 2px rgb(109, 109, 109);
+	text-align: center;
+	transform: translateX(0%);
+	transition: all 0.6s;
+}
+.cards:hover .card-heading {
+	transform: translateX(-15%);
+	text-shadow: 1px 1px 2px rgb(255, 69, 0);
+}
+
+// ======================MOTORS CARD SECTION================
+
+.motors {
+	background-image: url("../image/fishing-boat_1920.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	h2 {
+		color: $black;
+		// text-shadow: 1px 1px 2px $white;
+	}
+	.motors-box {
+		margin: 20px 10px;
+		padding: 30px;
+		background-color: $white;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+		transition: transform 0.3s;
+		.btn {
+			padding: 12px 30px;
+			font-size: 1.3rem;
+			font-weight: bold;
+		}
+		.btn:hover {
+			background-color: rgba(255, 111, 0, 0.8);
+		}
+		h3 {
+			color: $main-color;
+			text-transform: uppercase;
+			font-size: 2.5rem;
+			font-weight: bold;
+			text-shadow: 1px 1px 1px black;
+		}
+
+		span {
+			font-weight: bold;
+		}
+
+		i {
+			padding: 0 5px;
+			font-size: 24px;
+		}
+
+		button {
+			padding: 10px 20px;
+			text-transform: uppercase;
+		}
+
+		.motors-tag {
+			font-size: 20px;
+			font-weight: bold;
+		}
+	}
+
+	.motors-box:hover {
+		transform: scale(1.05);
+	}
+}
+
+//  --------------------------- SECTION HELP -------------------
+
+.help {
+	.help-heading {
+		color: $black;
+	}
+
+	&__box {
+		margin: 1em 0;
+		background-color: $pure-white;
+		box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.2);
+		overflow: hidden;
+
+		&-img {
+			width: 100%;
+			transition: transform 0.3s;
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+		&-info {
+			padding: 2em;
+			z-index: 12;
+			text-align: center;
+		}
+
+		&-heading {
+			text-align: center;
+			font-size: 2.5rem;
+		}
+
+		&-text {
+			margin-bottom: 1em;
+			font-size: 1.5rem;
+		}
+
+		&-btn {
+			background-color: $btn-color;
+			text-transform: uppercase;
+			margin-bottom: 1em;
+			width: 35%;
+			height: auto;
+			padding: 1em;
+			border: none;
+			border-radius: 10px;
+			cursor: pointer;
+			font-size: 1.2rem;
+			font-weight: bold;
+			box-shadow: 2px 2px 5px $black;
+
+			&:before {
+				background-color: $main-color;
+			}
+		}
+	}
+}
+
+// ------------------ SECTION ACCESSORY ----------------
+
+// .accessory {
+// 	position: relative;
+// 	background-image: url("/image/fishing-boat2_1920.jpg");
+// 	background-size: cover;
+// 	background-attachment: fixed;
+// 	z-index: 0;
+
+// 	h2 {
+// 		color: $white;
+// 		text-shadow: 1px 1px 2px $black;
+// 		// text-shadow: 1px 1px 2px $black;
+// 	}
+
+// 	.accessory-bg {
+// 		background-color: rgba(0, 0, 0, 0.8);
+// 	}
+
+// 	.accessory-box {
+// 		margin: 20px 10px;
+// 		padding: 30px;
+// 		background-color: $white;
+// 		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+// 		transition: transform 0.5s;
+// 		.btn {
+// 			padding: 12px 30px;
+// 			font-size: 1.3rem;
+// 			font-weight: bold;
+// 		}
+// 		.btn:hover {
+// 			background-color: rgba(255, 111, 0, 0.8);
+// 		}
+
+// 		.box-heading {
+// 			color: $black;
+// 			text-transform: uppercase;
+// 			font-size: 2.5rem;
+// 			font-weight: bold;
+// 			text-shadow: 1px 1px 1px rgb(133, 133, 133);
+// 		}
+
+// 		span {
+// 			font-weight: bold;
+// 		}
+
+// 		i {
+// 			padding: 0 5px;
+// 			font-size: 24px;
+// 		}
+
+// 		button {
+// 			padding: 10px 20px;
+// 			text-transform: uppercase;
+// 		}
+
+// 		.accessory-tag {
+// 			font-size: 20px;
+// 			font-weight: bold;
+// 		}
+// 	}
+
+// 	.accessory-box:hover {
+// 		transform: scale(1.05);
+// 	}
+// }
+
+// AKCESORIA SEKCJA
+
+.akcesoria {
+	position: relative;
+	background-image: url("/image/fishing-boat2_1920.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 0;
+	height: 70vh;
+
+	h2 {
+		color: $light-gray;
+	}
+	p {
+		text-align: center;
+	}
+
+	.akcesoria-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: -5;
+	}
+
+	.card {
+		transition: transform 0.3s;
+		img {
+			height: 250px;
+			object-fit: scale-down;
+		}
+	}
+
+	.card:hover {
+		transform: scale(0.96);
+	}
+
+	.card-title {
+		margin-top: 2em;
+		font-size: 2.5em;
+		text-align: center;
+		font-weight: 500;
+		text-shadow: 1px 1px 1px $black;
+		text-transform: uppercase;
+	}
+}
+
+// ------------------- WHERE TO BUY SECTION --------------
+
+.buy {
+	position: relative;
+	height: 100%;
+	background: rgb(120, 120, 120);
+	background: linear-gradient(
+		0deg,
+		rgba(120, 120, 120, 1) 0%,
+		rgba(255, 255, 255, 1) 100%
+	);
+
+	.card-buy {
+		margin-top: 2em;
+		position: relative;
+	}
+
+	.card-bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(80, 80, 80, 0.8);
+		border-radius: 20px;
+	}
+
+	.card-inside {
+		background-image: url("../image/buy-1920.jpg");
+		background-size: cover;
+		background-position: center;
+		background-attachment: scroll;
+		box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.4);
+		position: relative;
+		border-radius: 20px;
+		color: $white;
+	}
+
+	.card-title {
+		font-size: 2.5rem;
+		text-shadow: 1px 1px 2px $black;
+		text-align: center;
+		margin: 2em 1em;
+	}
+
+	.card-text {
+		text-align: center;
+		margin: 2em 1em 0em 1em;
+		font-size: 1.5em;
+	}
+	.buy-btn {
+		position: relative;
+		left: 28%;
+		width: 40%;
+		background-color: rgb(0, 159, 190);
+		text-transform: uppercase;
+		margin: 2.5em 1em;
+		padding: 1em;
+		border: none;
+		border-radius: 10px;
+		cursor: pointer;
+		font-size: 1.4rem;
+		font-weight: bold;
+		box-shadow: 1px 1px 10px 2px $white;
+
+		&:before {
+			background-color: $main-color;
+		}
+	}
+
+	// .img-buy {
+	// 	position: relative;
+	// 	background-image: url("../image/Cayman_buy1.jpg");
+	// 	background-size: cover;
+	// 	margin-top: 8em;
+	// 	margin-bottom: 5em;
+	// 	border-radius: 5px;
+	// 	box-shadow: 0px 0px 15px 2px $white;
+	// 	height: 400px;
+	// 	transition: 0.3s;
+
+	// 	&:hover {
+	// 		scale: 0.95;
+	// 	}
+	// }
+}
+
+// SECTION PHOTO START
+
+.photo {
+	position: relative;
+	height: 50vh;
+
+	.card img {
+		height: 50vh;
+	}
+}
+
+.contact {
+	position: relative;
+	background-image: url("../image/Footer-1920.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	z-index: 0;
+	box-shadow: 0px -3px 20px 5px rgb(85, 85, 85);
+
+	.fa-phone,
+	.fa-at {
+		font-size: 1.5rem;
+	}
+
+	h2 {
+		color: $white;
+	}
+
+	p {
+		font-size: 1.4rem;
+	}
+
+	.contact-shadow {
+		position: absolute;
+		background-color: rgba(0, 9, 27, 0.8);
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -5;
+	}
+	.contact-us {
+		color: $white;
+		display: flex;
+		align-items: center;
+
+		.shorts {
+			a {
+				text-decoration: none;
+				color: $white;
+				transition: 0.3s;
+			}
+			a:hover {
+				cursor: pointer;
+				color: $main-color;
+			}
+		}
+
+		.contact-items {
+			margin: 30px 0;
+			h3 {
+				margin-bottom: 15px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+			.social-media {
+				.social-icon {
+					transition: color 0.5s;
+				}
+				.fa-youtube:hover {
+					color: $secondary-color;
+				}
+				.fa-facebook-f:hover {
+					color: $fb-icon;
+				}
+				.fa-instagram:hover {
+					color: $insta;
+				}
+				a {
+					padding: 15px;
+					color: $white;
+					font-size: 2.2rem;
+					transition: color 0.5s;
+					text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);
+				}
+			}
+		}
+	}
+}
+
+footer {
+	p {
+		margin-bottom: 0;
+		text-transform: uppercase;
+		font-size: 1.2rem;
+	}
+}
+
+// =====================
+// START MEDIA QUERIES
+// =====================
+
+@media (min-width: 368px) {
+	.info-text {
+		margin: 0 5px;
+		font-size: 1.2rem;
+	}
+	.logo-hw {
+		margin-left: 0px;
+	}
+}
+
+@media (min-width: 576px) {
+	.fa-phone,
+	.fa-at {
+		font-size: 1.6rem;
+	}
+	header {
+		.fa-chevron-down {
+			left: 50%;
+		}
+	}
+
+	h1 {
+		font-size: 3rem;
+	}
+	.h2heading {
+		font-size: 3.5rem;
+	}
+	p {
+		font-size: 1.4rem;
+	}
+
+	.card-body {
+		height: 150px;
+	}
+
+	.card {
+		img {
+			height: 300px;
+			object-fit: cover;
+		}
+	}
+
+	header {
+		h1 {
+			font-size: 2.4rem;
+		}
+		.logo-hw {
+			margin-left: 10px;
+		}
+	}
+
+	.help {
+		&__box {
+			display: flex;
+			margin: 2em 0;
+			width: 100%;
+
+			&-img {
+				width: 50%;
+				height: auto;
+
+				&--right {
+					order: 1;
+				}
+			}
+			&-info {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				text-align: center;
+			}
+
+			&-heading {
+				padding: 3em 3em;
+				text-align: center;
+				font-size: 3rem;
+				margin: 0 auto;
+			}
+
+			&-btn {
+				padding: 1em;
+				left: 30%;
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 667px) {
+	.cards {
+		position: relative;
+		width: auto;
+		max-width: 600px;
+		transition: 0.5s;
+		align-items: flex-start;
+		&:hover {
+			height: 600px;
+		}
+	}
+	.card-news{
+		position: absolute;
+		transform: translateY(500%);
+		
+	}
+
+	.cards .motor-card-img {
+		transition: 0.6s;
+	}
+
+	.cards:hover .motor-card-img {
+		bottom: 10%;
+		left: 50%;
+		height: 280px;
+	}
+	.cards .content {
+		position: relative;
+		width: 100%;
+		left: 0;
+	}
+
+	.button-motor {
+		right: 4%;
+	}
+
+	.cards:hover .button-motor {
+		top: 280px;
+	}
+
+	.cards:hover .card-heading {
+		transform: translateX(0%);
+	}
+}
+
+@media (min-width: 768px) {
+	.accessory {
+		.accessory-box {
+			.box-heading {
+				font-size: 2rem;
+			}
+		}
+	}
+
+	header {
+		h1 {
+			font-size: 3.5rem;
+		}
+	}
+	.section-heading {
+		font-size: 3.6rem;
+	}
+	.section-padding {
+		padding: 8em 2em;
+	}
+}
+
+.help {
+	&-heading {
+		margin-top: 1.5em;
+	}
+}
+.contact {
+	p {
+		font-size: 1.6rem;
+	}
+}
+
+@media (min-width: 992px) {
+	header {
+		.logo-hw {
+			width: 50%;
+		}
+
+		.btn-home {
+			font-size: 1.4rem;
+		}
+		.fa-chevron-down {
+			left: 49%;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	header {
+		.logo-hw {
+			width: 40%;
+		}
+
+		.btn-home {
+			font-size: 1.4rem;
+		}
+		.fa-chevron-down {
+			left: 50%;
+		}
+	}
+
+	.help {
+		&__box {
+			&-heading {
+				padding: 2em;
+				font-size: 5rem;
+			}
+			&-text {
+				margin-top: 4em;
+				font-size: 1.7rem;
+				text-align: center;
+			}
+			&-btn {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
