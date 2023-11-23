@@ -510,13 +510,22 @@ header .fa-chevron-down {
   border-top-right-radius: 0;
   border-bottom-left-radius: 0;
   font-size: 1.8rem;
+  background: rgb(0, 0, 0);
+  color: #fff;
 }
-
+.cards .card-voltage12 {
+  background: rgb(0, 200, 255);
+}
+.cards .card-voltage24 {
+  background: rgb(0, 100, 255);
+}
 .cards:hover .card-news,
 .cards:hover .card-news2,
 .cards:hover .card-bestseller,
 .cards:hover .card-bestseller2,
-.cards:hover .card-voltage {
+.cards:hover .card-voltage12,
+.cards:hover .card-voltage24,
+.cards:hover .card-voltage48 {
   opacity: 0;
   visibility: hidden;
 }

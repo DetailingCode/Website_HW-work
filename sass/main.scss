@@ -450,7 +450,8 @@ header {
 	.card-bestseller2 {
 		font-size: 1.3rem;
 	}
-	.card-voltage {
+	.card-voltage
+	 {
 		top: 0;
 		left: 0;
 		height: 40px;
@@ -460,8 +461,10 @@ header {
 		border-top-right-radius: 0;
 		border-bottom-left-radius: 0;
 		font-size: 1.8rem;
+		background: $voltage48-color;
+		color: $white;
 	}
-}
+
 
 .cards:hover .card-news,
 .cards:hover .card-news2,
@@ -471,6 +474,7 @@ header {
 	opacity: 0;
 	visibility: hidden;
 }
+
 
 .cards .motor-card-img {
 	position: absolute;
