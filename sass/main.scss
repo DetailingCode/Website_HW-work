@@ -3,6 +3,7 @@
 @import "./animation";
 @import "./components";
 @import "./mixins";
+@import "./motor-description";
 
 body {
 	position: relative;
@@ -189,7 +190,7 @@ header {
 
 	.logo-hw {
 		margin-left: 1em;
-		width: 70%;
+		max-width: 70%;
 	}
 
 	.hero-img {
@@ -299,6 +300,10 @@ header {
 		background-size: cover;
 	}
 }
+
+
+
+
 
 // FEATURES SECTION
 
@@ -412,7 +417,7 @@ header {
 
 	transition: all 0.6s;
 	&:hover {
-		box-shadow: 1px 1px 20px rgba(255, 69, 0, 0.9);
+		box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.9);
 		// border: none;
 	}
 
@@ -450,8 +455,7 @@ header {
 	.card-bestseller2 {
 		font-size: 1.3rem;
 	}
-	.card-voltage
-	 {
+	.card-voltage {
 		top: 0;
 		left: 0;
 		height: 40px;
@@ -463,9 +467,9 @@ header {
 		font-size: 1.8rem;
 		background: $voltage48-color;
 		color: $white;
+		transition: 0.5s;
 	}
-
-
+}
 .cards:hover .card-news,
 .cards:hover .card-news2,
 .cards:hover .card-bestseller,
@@ -474,7 +478,6 @@ header {
 	opacity: 0;
 	visibility: hidden;
 }
-
 
 .cards .motor-card-img {
 	position: absolute;
@@ -634,7 +637,7 @@ header {
 
 		&-heading {
 			text-align: center;
-			font-size: 2.5rem;
+			font-size: 3rem;
 		}
 
 		&-text {
@@ -646,13 +649,13 @@ header {
 			background-color: $btn-color;
 			text-transform: uppercase;
 			margin-bottom: 1em;
-			width: 35%;
+			width: 45%;
 			height: auto;
 			padding: 1em;
 			border: none;
 			border-radius: 10px;
 			cursor: pointer;
-			font-size: 1.2rem;
+			font-size: 1.5rem;
 			font-weight: bold;
 			box-shadow: 2px 2px 5px $black;
 
@@ -757,6 +760,7 @@ header {
 	}
 
 	.card {
+		margin-top: 3em;
 		transition: transform 0.3s;
 		img {
 			height: 250px;
@@ -769,7 +773,7 @@ header {
 	}
 
 	.card-title {
-		margin-top: 2em;
+		margin-top: 1em;
 		font-size: 2.5em;
 		text-align: center;
 		font-weight: 500;
@@ -780,71 +784,71 @@ header {
 
 // ------------------- WHERE TO BUY SECTION --------------
 
-.buy {
-	position: relative;
-	height: 100%;
-	background: rgb(120, 120, 120);
-	background: linear-gradient(
-		0deg,
-		rgba(120, 120, 120, 1) 0%,
-		rgba(255, 255, 255, 1) 100%
-	);
+// .buy {
+// 	position: relative;
+// 	height: 100%;
+// 	background: rgb(120, 120, 120);
+// 	background: linear-gradient(
+// 		0deg,
+// 		rgba(120, 120, 120, 1) 0%,
+// 		rgba(255, 255, 255, 1) 100%
+// 	);
 
-	.card-buy {
-		margin-top: 2em;
-		position: relative;
-	}
+// 	.card-buy {
+// 		margin-top: 2em;
+// 		position: relative;
+// 	}
 
-	.card-bg {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(80, 80, 80, 0.8);
-		border-radius: 20px;
-	}
+// 	.card-bg {
+// 		position: absolute;
+// 		width: 100%;
+// 		height: 100%;
+// 		background-color: rgba(80, 80, 80, 0.8);
+// 		border-radius: 20px;
+// 	}
 
-	.card-inside {
-		background-image: url("../image/buy-1920.jpg");
-		background-size: cover;
-		background-position: center;
-		background-attachment: scroll;
-		box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.4);
-		position: relative;
-		border-radius: 20px;
-		color: $white;
-	}
+// 	.card-inside {
+// 		background-image: url("../image/buy-1920.jpg");
+// 		background-size: cover;
+// 		background-position: center;
+// 		background-attachment: scroll;
+// 		box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.4);
+// 		position: relative;
+// 		border-radius: 20px;
+// 		color: $white;
+// 	}
 
-	.card-title {
-		font-size: 2.5rem;
-		text-shadow: 1px 1px 2px $black;
-		text-align: center;
-		margin: 2em 1em;
-	}
+// 	.card-title {
+// 		font-size: 2.5rem;
+// 		text-shadow: 1px 1px 2px $black;
+// 		text-align: center;
+// 		margin: 2em 1em;
+// 	}
 
-	.card-text {
-		text-align: center;
-		margin: 2em 1em 0em 1em;
-		font-size: 1.5em;
-	}
-	.buy-btn {
-		position: relative;
-		left: 28%;
-		width: 40%;
-		background-color: rgb(0, 159, 190);
-		text-transform: uppercase;
-		margin: 2.5em 1em;
-		padding: 1em;
-		border: none;
-		border-radius: 10px;
-		cursor: pointer;
-		font-size: 1.4rem;
-		font-weight: bold;
-		box-shadow: 1px 1px 10px 2px $white;
+// 	.card-text {
+// 		text-align: center;
+// 		margin: 2em 1em 0em 1em;
+// 		font-size: 1.5em;
+// 	}
+// 	.buy-btn {
+// 		position: relative;
+// 		left: 28%;
+// 		width: 40%;
+// 		background-color: rgb(0, 159, 190);
+// 		text-transform: uppercase;
+// 		margin: 2.5em 1em;
+// 		padding: 1em;
+// 		border: none;
+// 		border-radius: 10px;
+// 		cursor: pointer;
+// 		font-size: 1.4rem;
+// 		font-weight: bold;
+// 		box-shadow: 1px 1px 10px 2px $white;
 
-		&:before {
-			background-color: $main-color;
-		}
-	}
+// 		&:before {
+// 			background-color: $main-color;
+// 		}
+// 	}
 
 	// .img-buy {
 	// 	position: relative;
@@ -861,7 +865,7 @@ header {
 	// 		scale: 0.95;
 	// 	}
 	// }
-}
+// }
 
 // SECTION PHOTO START
 
@@ -1145,6 +1149,30 @@ footer {
 		.fa-chevron-down {
 			left: 49%;
 		}
+	}
+
+	.description-card-wrapper {
+		position: relative;
+		top:5em;
+		min-height: 79vh;
+		// display: flex;
+		// justify-content: center;
+		// align-items: center;
+		.product-card-description {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			border: none;
+			.product-imgs {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+		}
+	}
+	.section--description-tabs{
+		position: relative;
+		min-height: 100vh;
+		
 	}
 }
 
