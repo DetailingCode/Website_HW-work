@@ -1,7 +1,10 @@
 // MOTOR DESCRIPTION START
 
+.between {
+	padding-top: 5em;
+}
 
-.product-description{
+.product-description {
 	// position: relative;
 	// background-image: url("/background/osapian-bg.JPG");
 	// background-size: cover;
@@ -19,23 +22,25 @@
 // 	z-index: -5;
 // }
 
-
 .description-card-wrapper {
-	max-width: 1200px;
-	margin: 0 auto;
-	top: 10%;
+	position: relative;
+	max-width: 70%;
+	width: 100%;
+	height: auto;
+	left: 50%;
+	transform: translate(-50%);
+}
 
-	// LEFT SITE
+// LEFT SITE
 
-	.img-display {
-		overflow: hidden;
-		.img-showcase {
-			display: flex;
-			width: 100%;
-			transition: all 0.5s ease;
-			.img-showcase-photo {
-				min-width: 100%;
-			}
+.img-display {
+	overflow: hidden;
+	.img-showcase {
+		display: flex;
+		width: 100%;
+		transition: all 0.5s ease;
+		.img-showcase-photo {
+			min-width: 100%;
 		}
 	}
 }
@@ -69,10 +74,12 @@
 	// }
 }
 
-
+// ------------ RIGHT SIDE -------------------
 
 .product-description-content {
-	padding: 2rem 1rem;
+	position: relative;
+	padding: 1em;
+	margin-left: 1em;
 	// border-left: 1px solid rgb(171, 171, 171);
 	// background-color: rgba(255, 255, 255, 1);
 	// background-image: linear-gradient(
@@ -82,12 +89,12 @@
 	// );
 
 	.product-description-content-logo {
-		
 		position: relative;
-		height: 50px;
-		width: 100px;
+		height: 75px;
+		width: 150px;
 		filter: grayscale(100%);
-		
+		left: 50%;
+		transform: translate(-50%);
 	}
 
 	.product-description-content-title {
@@ -97,22 +104,36 @@
 		position: relative;
 		color: #12263a;
 		margin: 1rem 0;
-		text-align: left;
+	}
+
+	.product-description-content-detail-lbs,
+	.product-description-content-title {
+		text-align: center;
 	}
 
 	.product-description-content-detail {
-		h3{
-            font-size: 2.5rem;
-        }
-        
-        .fa-star {
-			color: #ff9100;
+		h3 {
+			font-size: 2.5rem;
+		}
+
+		.fa-star {
+			color: $star-available;
+		}
+
+		.product-description-content-detail-p {
+			font-size: 1.6rem;
+			padding: 0.3rem;
+			text-align: justify;
 		}
 	}
 
+	.product-description-list {
+		position: relative;
+	}
+
 	.product-description-content-price {
-		margin: 1rem 2rem;
-		font-size: 1.1rem;
+		margin: 3rem 2rem;
+		font-size: 1.7rem;
 		font-weight: 700;
 	}
 
@@ -131,12 +152,7 @@
 		list-style: none;
 		margin: 0.4rem 0;
 		font-weight: 600;
-	}
-
-	.product-description-content-detail-p {
-		font-size: 1.4rem;
-		padding: 0.3rem;
-		text-align: justify;
+		line-height: 2.5em;
 	}
 
 	.product-description-content-detail-span {
@@ -150,18 +166,264 @@
 	.product-description-content-new-price-span {
 		color: #255cc9;
 		font-weight: bold;
+		font-size: 1.5rem;
 	}
 
 	.warranty-link {
 		text-decoration: none;
 		color: #000;
+		font-weight: bold;
 		transition: all 0.3s;
 		&:hover {
 			color: #255cc9;
 		}
 	}
 
+	// <!-- TABS SECTION INSIDE DESCRIPTION -->
+
+	.description-hr {
+		margin: 0px;
+		color: $hr-color;
+	}
 }
 
-// <!-- TABS SECTION INSIDE DESCRIPTION -->
+// ============ TABLE SPECIFICATION OF MOTORS =============
+.specification-table-h2 {
+	margin-top: 1em;
+	color: $black;
+}
 
+// <!-- TABS SECTION CONNECTED PRODUCT -->
+
+.p-slider {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 50px auto;
+	width: 95%;
+	.connected-product-h2 {
+		color: $black;
+	}
+	.slider-btns {
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+		margin: 30px auto 10px auto;
+		padding: 0px 10px;
+		button {
+			position: static !important;
+			transform: translate(0, 0);
+			background-color: #ffffff;
+			color: black;
+			width: 80px;
+			height: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: 10px;
+			border: 1px solid #111111;
+			border-radius: 4px;
+			transition: all 0.3s;
+			&:hover {
+				color: $btn-darkblue;
+			}
+		}
+		.slider-btns-next {
+			font-weight: bold;
+			font-size: 2rem;
+			padding: 10px 15px 10px 10px;
+			position: relative;
+			text-decoration: none;
+			&::before,
+			::after {
+				border-right: 2px solid;
+				display: block;
+				height: 8px;
+			}
+		}
+	}
+
+	.product-box {
+		display: flex;
+		flex-direction: column;
+		padding: 15px;
+		border-radius: 10px;
+		margin: 10px 20px;
+		position: relative;
+		background-color: $white;
+		transition: transform 0.3s ease;
+		&:hover {
+			transform: scale(1.02);
+		}
+
+		// .p-discount {
+		// 	position: absolute;
+		// 	left: 20px;
+		// 	top: 20px;
+		// 	width: 65px;
+		// 	height: 24px;
+		// 	color: #fff;
+		// 	background-color: #e63b3b;
+		// 	display: flex;
+		// 	justify-content: center;
+		// 	align-items: center;
+		// 	font-size: 1rem;
+		// 	letter-spacing: 1px;
+		// 	border-radius: 5px;
+		// 	z-index: 100;
+		// }
+
+		.p-img-container {
+			display: flex;
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+			.p-img,
+			.p-img a {
+				width: 100%;
+				height: 100%;
+				display: flex;
+			}
+		}
+		.btn-connected {
+			font-size: 1.2rem;
+		}
+		.p-img a img {
+			width: 100%;
+			height: 300px;
+			object-position: center;
+			object-fit: contain;
+			animation: fade 1s ease;
+		}
+
+		.p-img-back {
+			display: none;
+		}
+
+		.p-img-container:hover .p-img-back {
+			display: block;
+		}
+		.p-img-container:hover .p-img-front {
+			display: none;
+		}
+
+		.p-box-text {
+			margin-top: 5px;
+			width: 100%;
+		}
+		.product-category {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			flex-wrap: wrap;
+			span {
+				color: #2b2b2b;
+				font-size: 1.5rem;
+				margin: 5px 0px;
+			}
+		}
+
+		.product-title {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 2rem;
+			font-weight: bold;
+			line-height: 20px;
+			text-align: center;
+			color: $black;
+			z-index: 100;
+		}
+	}
+}
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+// ======= OBRAZ POD OPISEM SILNIKA ==============
+
+.img-under-description {
+	.text-center {
+		margin-bottom: 3em;
+	}
+}
+
+// ======= SEKCJA POZOSTALE MODELE SILNIKOW ==============
+
+.other-hw-motors {
+	padding: 1em;
+	background: rgb(202, 202, 202);
+	background: linear-gradient(
+		180deg,
+		rgba(202, 202, 202, 1) 0%,
+		rgba(164, 186, 205, 1) 48%,
+		rgba(202, 202, 202, 1) 100%
+	);
+
+	.other-hw-motors-h2 {
+		font-size: 3em;
+		font-family: "kanit", "sans-serif";
+		color: $black;
+		padding: 1em;
+		font-weight: bold;
+	}
+
+	.other-hw-motors-card-title {
+		font-size: 3em;
+		color: $white;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 1.5em;
+		font-family: "kanit", "sans-serif";
+		font-weight: 600;
+		text-shadow: 1px 1px 5px $orangered;
+		opacity: 1;
+		transition: all 0.3s;
+	}
+	.other-hw-motors-card {
+		border-radius: 10;
+		background-image: linear-gradient(
+			to bottom,
+			#3d3d3d,
+			#494949,
+			#565656,
+			#646464,
+			#717171,
+			#818181,
+			#919191,
+			#a1a1a1,
+			#b8b8b8,
+			#cfcfcf,
+			#e7e7e7,
+			#ffffff
+		);
+		border: none;
+		transform: all 0.5s;
+	}
+
+	.other-hw-motors-img {
+		height: 350px;
+		object-fit: scale-down;
+		transition: all 0.3s;
+	}
+
+	.other-hw-motors-card:hover .other-hw-motors-img {
+		transform: translateY(-100px) scale(1.5);
+	}
+
+	.other-hw-motors-card:hover .other-hw-motors-card-title {
+		opacity: 0;
+		// transform:  rotate(-90deg) translate(-100px, 100px);
+	}
+
+	// .other-hw-motors-card-footer {
+	// 	padding: 10px;
+	// 	z-index: 10;
+	// }
+}

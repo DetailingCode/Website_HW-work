@@ -4,6 +4,62 @@ $(".acc-carousel").slick({
 	autoplaySpeed: 3000,
 	arrows: false,
 	infinite: true,
+	// fade: true,
+	// cssEase: 'linear',
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	responsive: [
+		{
+			breakpoint: 576,
+			settings: { slidesToShow: 2 },
+		},
+		{
+			breakpoint: 768,
+			settings: { slidesToShow: 2 },
+		},
+
+		{
+			breakpoint: 992,
+			settings: { slidesToShow: 3 },
+		},
+	],
+});
+
+$(".others-model").slick({
+	mobileFirst: true,
+	autoplay: true,
+	autoplaySpeed: 2000,
+	arrows: false,
+	infinite: true,
+	// fade: true,
+	// cssEase: 'linear',
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	responsive: [
+		{
+			breakpoint: 576,
+			settings: { slidesToShow: 2 },
+		},
+		{
+			breakpoint: 768,
+			settings: { slidesToShow: 2 },
+		},
+
+		{
+			breakpoint: 992,
+			settings: { slidesToShow: 3 },
+		},
+	],
+});
+
+$(".connecter-product-carousel").slick({
+	mobileFirst: true,
+	autoplay: true,
+	autoplaySpeed: 4000,
+	arrows: false,
+	infinite: true,
+	fade: true,
+	cssEase: 'linear',
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	responsive: [
@@ -28,6 +84,8 @@ $(".photo-carousel").slick({
 	adaptiveHeight: false,
 	autoplaySpeed: 5000,
 	arrows: false,
+	fade: true,
+	cssEase: 'linear',
 	infinite: true,
 	slidesToShow: 1,
 	slidesToScroll: 1,
