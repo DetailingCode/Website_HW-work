@@ -1,6 +1,6 @@
 new Glider(document.querySelector(".glider"), {
 	slidesToScroll: 1,
-	slidesToShow: 3,
+	slidesToShow: 4,
 	draggable: true,
 	dots: ".dots",
 	arrows: {
@@ -8,6 +8,14 @@ new Glider(document.querySelector(".glider"), {
 		next: ".glider-next",
 	},
 	responsive: [
+		{
+			// screens greater than >= 1024px
+			breakpoint: 1920,
+			settings: {
+				slidesToShow: 4,
+				slidesToScroll: 2,
+			},
+		},
 		{
 			// screens greater than >= 1024px
 			breakpoint: 1200,

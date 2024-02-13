@@ -55,12 +55,12 @@ $(".others-model").slick({
 $(".connecter-product-carousel").slick({
 	mobileFirst: true,
 	autoplay: true,
-	autoplaySpeed: 4000,
+	autoplaySpeed: 2000,
 	arrows: false,
 	infinite: true,
-	fade: true,
+	fade: false,
 	cssEase: 'linear',
-	slidesToShow: 1,
+	slidesToShow: 4,
 	slidesToScroll: 1,
 	responsive: [
 		{
