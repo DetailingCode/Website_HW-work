@@ -1231,7 +1231,7 @@ input {
 }
 
 .features {
-  margin: 4em 0em 4em 0em;
+  padding: 4em 0em 4em 0em;
   background-color: #fff;
 }
 .features i {
@@ -1241,6 +1241,7 @@ input {
 .features .features-card-title {
   font-size: 18px;
   text-transform: uppercase;
+  font-weight: bold;
 }
 .features .features-card-text {
   font-size: 15px;
@@ -1249,7 +1250,7 @@ input {
   transition: all 0.3s;
 }
 .features .features-hover:hover {
-  color: rgb(255, 111, 0);
+  color: #1746a2;
   scale: 1.05;
   cursor: default;
 }

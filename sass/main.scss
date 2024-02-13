@@ -481,7 +481,7 @@ input {
 // FEATURES SECTION
 
 .features {
-	margin: 4em 0em 4em 0em;
+	padding: 4em 0em 4em 0em;
 	background-color: #fff;
 
 	i {
@@ -492,6 +492,7 @@ input {
 	.features-card-title {
 		font-size: 18px;
 		text-transform: uppercase;
+		font-weight: bold;
 	}
 
 	.features-card-text {
@@ -503,7 +504,7 @@ input {
 	}
 
 	.features-hover:hover {
-		color: $main-color;
+		color: $ui-blue;
 		scale: 1.05;
 		cursor: default;
 	}
